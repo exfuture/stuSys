@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE hibernate-mapping
+    PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="edu.sms.entity.BanJi" table="banji" lazy="false">
+    	<id name="bjId" column="bjId"   type="int"  >
+            <!-- native Assigned  increment  identity uuid.hex  uuid.string foreign -->
+            <generator class="native"/>
+		</id>
+	<property name="term" column="term" type="string"  length="30" not-null="true" />
+	<property name="dutyPerson" column="dutyPerson" type="string"  length="10" not-null="true" />
+	<property name="dutyDate" column="dutyDate" type="string"  length="10" not-null="true" />
+	<property name="classNo" column="classNo" type="string"  length="10" not-null="false" />
+	<property name="className" column="className" type="string"  length="10" not-null="false" />
+	<property name="ycq" column="ycq" type="string"  length="10" not-null="false" />
+	<property name="scq" column="scq" type="string"  length="10" not-null="false" />
+	<property name="xx" column="xx" type="string"  length="10" not-null="false" />
+	<property name="sj" column="sj" type="string"  length="10" not-null="false" />
+	<property name="bj" column="bj" type="string"  length="10" not-null="false" />
+	<property name="wgqq" column="wgqq" type="string"  length="10" not-null="false" />
+	<property name="wgqqxm" column="wgqqxm" type="string"  length="300" not-null="false" />
+	<property name="jl" column="jl" type="string"  length="10" not-null="false" />
+	<property name="ws" column="ws" type="string"  length="10" not-null="false" />
+	<property name="bjorjf" column="bjorjf" type="string"  length="10" not-null="false" />
+	<property name="txsj" column="txsj" type="string"  length="30" not-null="false" />
+    </class>
+
+
+</hibernate-mapping>

@@ -1,0 +1,119 @@
+<%@ page language="java" contentType="text/html; charset=gbk"
+    pageEncoding="gbk"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>½ÌÑ§ÖÊÁ¿ÆÀ¹ÀÏµÍ³</title>
+</head>
+ <LINK href="<%= request.getContextPath()%>/frame/style.css" type=text/css rel=stylesheet>
+<link href="<%=request.getContextPath() %>/comm/style/mainStyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+function checkPassword()
+{
+	var ele=document.getElementById("password");
+	var len=ele.value.length;
+	 if(len==0)
+	{
+
+		alert("ÃÜÂë²»ÄÜÎª¿Õ");
+		return false;
+	}else{
+		return true;
+	}
+	
+
+}
+function checkPassword1()
+{
+	var ele=document.getElementById("repassword");
+	var len=ele.value.length;
+	 if(len==0)
+	{
+
+		alert("ÇëÊäÈëÖØ¸´ÃÜÂë");
+		return false;
+	}else{
+		return true;
+	}
+	
+
+}
+
+function checkEqualPassword(){
+	var password=document.getElementById("password").value;
+	var repassword=document.getElementById("repassword").value;
+	if (password==repassword) {
+		return true;
+	}
+	else{
+		alert("Á½´ÎÃÜÂë²»Í¬,ÇëÖØÐÂÊäÈë");
+		return false;
+	}
+}
+function checkcmtform()
+{
+	
+	if(checkPassword()&&checkPassword1()&&checkEqualPassword())
+	{
+		alert("Ìá½»³É¹¦");
+		form1.submit();
+		
+	}
+	else
+	{
+		alert("²»ÄÜÌá½»");
+		
+	}
+}
+</script>
+<LINK href="<%= request.getContextPath()%>/frame/style.css" type=text/css rel=stylesheet>
+<link href="<%=request.getContextPath() %>/comm/style/mainStyle.css" rel="stylesheet" type="text/css">
+<body>
+<form name="form1" action="<%=request.getContentType() %>/leadLesson!addLeadLesson.action" method="post">
+<input type="hidden" name="lessonCode" value="${lesson.code}">
+	<table width="900" border=0 cellpadding=0 cellspacing=7 class="norepeat">
+		<tr height="21">
+			<td  height="21" align="left" valign="middle">
+				<img src="<%=request.getContextPath() %>/comm/image/arrow_001.gif" width="17" height="17">
+				<span class="pagetitle">½ÌÑ§ÖÊÁ¿ÆÀ¹ÀÏµÍ³&nbsp;>&nbsp;¿Î³Ì¹ÜÀí&nbsp;>&nbsp;Ç°µ¼¿Î¹ÜÀí&nbsp;>&nbsp;ÃÜÂëÑéÖ¤</span>
+			</td>			
+		</tr>
+	</table>
+<br><br><br><br>
+<table width="80%" bgcolor="#55AAEE" align="center">
+	<tr align="center" valign="middle" height="28">
+	
+		<td  align="center" class="tabletitle">¿Î³ÌÃû:</td>
+		<td bgcolor="#FFFFFF" align="left">${lesson.name}</td>
+	</tr>
+	<tr align="center" valign="middle" height="28">
+
+		<td  align="center" class="tabletitle">ÇëÊäÈë¿Î³ÌÃÜÂë</td>
+		<td bgcolor="#FFFFFF" align="left">
+			<input type="password" name="password" id="password"/>
+		</td>		
+	</tr>
+	<tr align="center" valign="middle" height="28">
+
+		<td  align="center" class="tabletitle">ÇëÖØ¸´ÊäÈë¿Î³ÌÃÜÂë</td>
+		<td bgcolor="#FFFFFF" align="left">
+			<input type="password" name="repassword" id="repassword"/>
+		</td>		
+	</tr>
+	<tr align="center" valign="middle" height="28">
+	
+		<td  align="center" class="tabletitle"></td>
+		<td bgcolor="#FFFFFF" align="left">
+			<input type="button" value="Ìá½»"  onclick="checkcmtform();"/>
+		</td>
+	</tr>
+</table>
+</form>
+
+</body>
+</html>
+
+</body>
+</html>

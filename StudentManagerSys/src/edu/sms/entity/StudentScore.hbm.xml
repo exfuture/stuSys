@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE hibernate-mapping
+    PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="edu.sms.entity.StudentScore" table="studentscore" lazy="false">
+    	<id name="ssId" column="ssid"   type="int"  >
+            <!-- native Assigned  increment  identity uuid.hex  uuid.string foreign -->
+            <generator class="native"/>
+		</id>
+	<property name="stuNo" column="stuno" type="string"  length="20" not-null="true" />
+	<property name="date" column="date" type="string"  length="10" not-null="true" />
+	<property name="addorcut" column="addorcut" type="string"  length="10" not-null="true" />
+	<property name="reason" column="reason" type="string"  length="50" not-null="false" />
+	<property name="studentScore" column="studentscore" type="string"  length="10" not-null="false" />
+	<property name="pfr" column="pfr" type="string"  length="10" not-null="false" />
+	<property name="term" column="term" type="string"  length="20" not-null="false" />
+	<property name="subTime" column="subtime" type="string"  length="20" not-null="false" />
+    </class>
+
+
+</hibernate-mapping>

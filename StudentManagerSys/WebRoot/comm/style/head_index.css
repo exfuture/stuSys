@@ -1,0 +1,48 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #FFFFFF url(../image/img01.jpg) repeat-x left top;
+}
+	/** LOGO */
+
+#logo {
+	width: 100%;
+	height: 170px;
+	margin: 0 auto;
+}
+
+#logo h1, #logo p {
+	margin: 0px;
+	line-height: normal;
+	font-weight: normal;
+	font-family: Monotype Corsiva;
+	color: #FFFFFF;
+}
+
+#logo p {
+	text-transform: uppercase;
+	padding-left: 30px;
+	font-size: 15px;
+}
+
+#logo h1 {
+	padding-top: 15px;
+	padding-left: 30px;
+	font-size: 35px;
+	font-style: oblique;
+}
+
+#logo a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+#h2 {
+	color: #FFFFFF;
+	font-size: 20px;
+	font-family: 华文行楷;
+	font-style: 华文行楷;
+	text-decoration: none;
+}
+
+

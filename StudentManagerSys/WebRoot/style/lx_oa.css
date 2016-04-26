@@ -1,0 +1,38 @@
+body,td,th,table {font-size: 13px; 
+}
+.db {
+border-collapse: collapse;
+}
+
+.db tr {
+background-color: expression('#F1F1F1,#ffffff'.split(',') [rowIndex%2] );
+}
+
+.norepeat { 
+background-repeat: no-repeat; 
+}
+
+
+
+.pagetitle {
+	color: #006699;
+	font-size: 16px;
+	font-weight: bold;
+}
+body {background-color: #FFFFFF;}
+.tabletitle {
+	color: #FFFFFF;
+	font-weight: bold;
+	background-color:#5591DF;
+	
+}
+.button {color: #000000;
+text-decoration:none}
+
+.nounderline{
+text-decoration:none}
+
+.noRecord {
+	background-color: #EBECEB;
+}
+

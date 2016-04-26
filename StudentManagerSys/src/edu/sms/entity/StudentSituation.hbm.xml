@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE hibernate-mapping
+    PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="edu.sms.entity.StudentSituation" table="studentSituation" lazy="false">
+		<composite-id>
+            <key-property name="stuNo" column="stuno" type="string" />
+            <key-property name="term" column="term" type="string" />
+   		 </composite-id>
+	<property name="classNo" column="classno" type="string"  length="20" not-null="true" />
+	<property name="lastTermRank" column="lasttermrank" type="string"  length="10" not-null="false" />
+	<property name="lastTermScore" column="lasttermscore" type="string"  length="10" not-null="false" />
+	<property name="studentScore" column="studentscore" type="string"  length="10" not-null="true" />
+    </class>
+</hibernate-mapping>

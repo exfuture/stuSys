@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE hibernate-mapping
+    PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="edu.sms.entity.Role" table="ROLE" lazy="false">
+    	<id name="ROLE_ID" column="ROLE_ID"   type="string" length="9" >
+            <!-- native Assigned  increment  identity uuid.hex  uuid.string foreign -->
+            <generator class="assigned"/>
+		</id>
+	<property name="ROLE_NAME" column="ROLE_NAME" type="string"  length="50" not-null="true" />
+    </class>
+
+
+</hibernate-mapping>

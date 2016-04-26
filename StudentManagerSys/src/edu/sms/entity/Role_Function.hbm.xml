@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE hibernate-mapping
+    PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+<class name="edu.sms.entity.Role_Function" table="ROLE_FUNCTION">
+	<composite-id>
+            <key-property name="ROLE_ID" column="ROLE_ID" type="string" />
+            <key-property name="FUNCTION_ID" column="FUNCTION_ID" type="string" />
+    </composite-id>
+</class>
+
+
+</hibernate-mapping>

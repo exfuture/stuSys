@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE hibernate-mapping
+    PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="edu.sms.entity.Func" table="CFUNCTION" lazy="false">
+    	<id name="FUNCTION_ID" column="FUNCTION_ID"   type="string"  >
+            <!-- native Assigned  increment  identity uuid.hex  uuid.string foreign -->
+            <generator class="assigned"/>
+		</id>
+	<property name="ID" column="ID" type="string"  length="10" not-null="true" />
+	<property name="PARENT_ID" column="PARENT_ID" type="string"  length="10" not-null="true" />
+	<property name="NAME" column="NAME" type="string"  length="30" not-null="true" />
+	<property name="ACTIONNAME" column="ACTIONNAME" type="string"  length="100" not-null="false" />
+    </class>
+
+
+</hibernate-mapping>

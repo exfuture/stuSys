@@ -1,0 +1,156 @@
+A:link {
+	COLOR: #005fa9; FONT-FAMILY: 宋体; TEXT-DECORATION: underline
+}
+A:visited {
+	COLOR: #005fa9; FONT-FAMILY: 宋体; TEXT-DECORATION: underline
+}
+A:active {
+	COLOR: #ff0000; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff0000; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+.T1 {
+	FONT-SIZE: 14px; COLOR: #555555; LINE-HEIGHT: 20px; FONT-FAMILY: 宋体
+}
+.T1:link {
+	COLOR: #005fa9; FONT-FAMILY: 宋体; TEXT-DECORATION: underline
+}
+.T1:visited {
+	COLOR: #005fa9; FONT-FAMILY: 宋体; TEXT-DECORATION: underline
+}
+.T1:active {
+	COLOR: #ff6600; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+.T1:hover {
+	COLOR: #ff6600; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+.T2 {
+	FONT-SIZE: 14px; COLOR: #ffffff; LINE-HEIGHT: 20px; FONT-FAMILY: 宋体
+}
+.T2:link {
+	COLOR: #ffffff; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+.T2:visited {
+	COLOR: #ffffff; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+.T2:active {
+	COLOR: #ffcc00; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+.T2:hover {
+	COLOR: #ffcc00; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+.T3 {
+	FONT-SIZE: 14px; COLOR: #268a7f; LINE-HEIGHT: 20px; FONT-FAMILY: 宋体
+}
+.T3:link {
+	COLOR: #268a7f; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+.T3:visited {
+	COLOR: #268a7f; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+.T3:active {
+	COLOR: #ffcc00; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+.T3:hover {
+	COLOR: #ffcc00; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+.T4 {
+	FONT-SIZE: 14px; COLOR: #ffffff; LINE-HEIGHT: 20px; FONT-FAMILY: 宋体
+}
+.T4:link {
+	COLOR: #ffffff; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+.T4:visited {
+	COLOR: #ffffff; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+.T4:active {
+	COLOR: #ffcc00; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+.T4:hover {
+	COLOR: #ffcc00; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+.s1 {
+	FONT-SIZE: 9pt; COLOR: #555555; LINE-HEIGHT: 18px; FONT-FAMILY: 宋体
+}
+.s1:link {
+	COLOR: #555555; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+.s1:visited {
+	COLOR: #555555; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+.s1:active {
+	COLOR: #ff6600; FONT-FAMILY: 宋体; TEXT-DECORATION: underline
+}
+.s1:hover {
+	COLOR: #ff6600; FONT-FAMILY: 宋体; TEXT-DECORATION: underline
+}
+.s2 {
+	FONT-SIZE: 9pt; COLOR: #555555; LINE-HEIGHT: 18px; FONT-FAMILY: 宋体
+}
+.s2:link {
+	COLOR: #005fa9; FONT-FAMILY: 宋体; TEXT-DECORATION: underline
+}
+.s2:visited {
+	COLOR: #005fa9; FONT-FAMILY: 宋体; TEXT-DECORATION: underline
+}
+.s2:active {
+	COLOR: #ff6600; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+.s2:hover {
+	COLOR: #ff6600; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+.s3 {
+	FONT-SIZE: 13px; COLOR: #83fffb; LINE-HEIGHT: 18px; FONT-FAMILY: 宋体
+}
+.s3:link {
+	COLOR: #83fffb; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+.s3:visited {
+	COLOR: #83fffb; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+.s3:active {
+	COLOR: #ffff00; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+.s3:hover {
+	COLOR: #ffff00; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+.s4 {
+	FONT-SIZE: 13px; COLOR: #095d78; LINE-HEIGHT: 18px; FONT-FAMILY: 宋体
+}
+.s4:link {
+	COLOR: #095d78; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+.s4:visited {
+	COLOR: #095d78; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+.s4:active {
+	COLOR: #ffffff; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+.s4:hover {
+	COLOR: #ffffff; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+.gb2 {
+	FONT-SIZE: 9pt; COLOR: #2d887e; LINE-HEIGHT: 14pt; FONT-FAMILY: 宋体
+}
+.gb2:link {
+	COLOR: #2d887e; FONT-FAMILY: 宋体; TEXT-DECORATION: underline
+}
+.gb2:visited {
+	COLOR: #2d887e; FONT-FAMILY: 宋体; TEXT-DECORATION: underline
+}
+.gb2:active {
+	COLOR: #2d887e; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+.gb2:hover {
+	COLOR: #2d887e; FONT-FAMILY: 宋体; TEXT-DECORATION: none
+}
+TEXTAREA {
+	FONT-SIZE: 9pt; COLOR: #000000; FONT-FAMILY: 宋体; BACKGROUND-COLOR: #ffffff
+}
+SELECT {
+	FONT-SIZE: 9pt; COLOR: #000000; FONT-FAMILY: 宋体; BACKGROUND-COLOR: #ffffff
+}
+INPUT {
+	PADDING-LEFT: 0px; FONT-SIZE: 9pt; COLOR: #000000; PADDING-TOP: 0px; FONT-FAMILY: 宋体
+}

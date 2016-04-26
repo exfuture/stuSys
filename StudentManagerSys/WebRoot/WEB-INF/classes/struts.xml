@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	<include file="struts-default.xml" />
+	
+
+	<package name="hello" extends="json-default" >
+		<default-interceptor-ref name="basicStack"/>
+		<action name="login" class="loginAction" >
+			<result name="lose" type="dispatcher" >/jsp/jump.jsp</result>
+			<result name="success" type="dispatcher" >/index.jsp</result>
+			<result name="success1" type="dispatcher" >/index1.jsp</result>
+			<result name="reloadup" type="redirect" >/index.jsp</result>
+	        
+		</action>
+						
+		<action name="sys" class="sysAction" >			
+			<result name="query" type="dispatcher" >/jsp/sys/sys.jsp</result>
+			<result name="editPage" type="dispatcher" >/jsp/sys/sysedit.jsp</result>
+			<result name="reloadup" type="dispatcher" >/index.jsp</result>
+			<result name="queryRoles" type="dispatcher" >/jsp/sys/function_index.jsp</result>
+			<result name="addRolePage" type="dispatcher" >/jsp/sys/addRoleFunctionPage.jsp</result>
+			<result name="editRolePage" type="dispatcher" >/jsp/sys/editRolePage.jsp</result>	
+			<result name="deleteRoleError" type="dispatcher" >/jsp/deleteRoleError.jsp</result>		
+			<result name="queryLuser" type="dispatcher" >/jsp/sys/editUserPage.jsp</result>	
+		</action>
+		
+		<action name="student" class="studentAction" >
+			<result name="student" type="dispatcher" >/student/student.jsp</result>
+			<result name="studentScore" type="dispatcher" >/student/studentScore.jsp</result>
+			<result name="studentScore1" type="dispatcher" >/student/studentScore1.jsp</result>
+			<result name="success1" type="dispatcher" >/index1.jsp</result>
+			<result name="lose" type="redirect" >/login.jsp</result>
+			<result name="studentSituation" type="dispatcher" >/student/studentSituation.jsp</result>
+			<result name="openDuty" type="dispatcher" >/duty/zhibanbiao2013-2014-01.jsp</result>
+			<result name="queryDuty" type="dispatcher" >/duty/queryDuty.jsp</result>
+			<result name="backF" type="dispatcher" >/frame/right.htm</result>
+		</action>
+		
+		<action name="teacher" class="teacherAction" >
+			<result name="signInPage" type="dispatcher" >/teacher/teacherSignIn.jsp</result>
+			<result name="lose" type="redirect" >/login.jsp</result>
+			<result name="test" type="dispatcher" >/teacher/message.jsp</result>
+			<result name="querySignPage" type="dispatcher" >/teacher/queryTeacherSign.jsp</result>
+			<result name="querySign" type="dispatcher" >/teacher/queryTeacherSign.jsp</result>
+		     <!-- test -->
+		    <result name="fail" type="redirect" >/teacher/test.jsp</result>
+		    <result name="try" type="redirect" >/teacher/test.jsp</result>
+		    <result name="ff" type="dispatcher" >/teacher/test1.jsp</result>
+		</action>
+	</package>
+ 
+	
+</struts>

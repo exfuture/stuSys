@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE hibernate-mapping
+    PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="edu.sms.entity.Testt" table="testt" lazy="false">
+    	<id name="testId" column="testId"   type="int"  >
+            <!-- native Assigned  increment  identity uuid.hex  uuid.string foreign -->
+            <generator class="assigned"/>
+		</id>
+	 
+ 
+	<property name="test" column="test" type="string"  length="10" not-null="false" />
+	<property name="testa" column="testa" type="string"  length="10" not-null="false" />
+
+    </class>
+
+
+</hibernate-mapping>

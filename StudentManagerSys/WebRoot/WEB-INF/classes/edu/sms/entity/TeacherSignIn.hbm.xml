@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE hibernate-mapping
+    PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="edu.sms.entity.TeacherSignIn" table="teachersignin" lazy="false">
+    	<id name="tsiId" column="tsiId"   type="int"  >
+            <!-- native Assigned  increment  identity uuid.hex  uuid.string foreign -->
+            <generator class="native"/>
+		</id>
+	<property name="term" column="term" type="string"  length="30" not-null="true" />
+	<property name="teacherNo" column="teacherNo" type="string"  length="20" not-null="true" />
+	<property name="signTime" column="signTime" type="string"  length="30" not-null="true" />
+	<property name="signDay" column="signday" type="string"  length="20" not-null="false" />
+	<property name="day" column="day" type="string"  length="10" not-null="true" />
+	<property name="jc" column="jc" type="string"  length="10" not-null="true" />
+	<property name="flag" column="flag" type="string"  length="10" not-null="true" />
+	<property name="signKc" column="signkc" type="string"  length="50" not-null="false" />
+	<property name="className" column="classname" type="string"  length="50" not-null="false" />
+    </class>
+</hibernate-mapping>

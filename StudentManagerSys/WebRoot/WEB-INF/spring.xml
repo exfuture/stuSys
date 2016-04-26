@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+	"http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" >
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		<property name="url">
+			<value>jdbc:mysql://localhost:3306/stumanger</value>
+		</property>
+		<property name="username">
+			<value>root</value>
+		</property>
+		<property name="password">
+			<value></value>
+		</property> 
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref local="dataSource" />
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>edu/sms/entity/LUser.hbm.xml</value>
+				<value>edu/sms/entity/Role.hbm.xml</value>
+				<value>edu/sms/entity/Role_Function.hbm.xml</value>
+				<value>edu/sms/entity/Func.hbm.xml</value>
+				<value>edu/sms/entity/Student.hbm.xml</value>
+				<value>edu/sms/entity/StudentScore.hbm.xml</value>
+				<value>edu/sms/entity/ClassDuty.hbm.xml</value>
+				<value>edu/sms/entity/StudentSituation.hbm.xml</value>
+				<value>edu/sms/entity/TeacherClass.hbm.xml</value>
+				<value>edu/sms/entity/TeacherSignIn.hbm.xml</value>
+				<value>edu/sms/entity/TeacherSignInDay.hbm.xml</value>
+				<value>edu/sms/entity/Testt.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.jdbc.batch_size">20</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+	</bean>
+
+
+	<bean id="dao" class="edu.sms.dao.Dao">
+		<property name="sessionFactory">
+			<ref local="sessionFactory" />
+		</property>
+	</bean>
+
+	<!-- 定义事务管理 -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<!-- 定义事务管理拦截器 -->
+	<bean id="transactionInterceptor"
+		class="org.springframework.transaction.interceptor.TransactionInterceptor">
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="transactionAttributes">
+			<props>
+				<prop key="get*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+	<!-- 定义代理自动管理事务 -->
+	<bean id="ProxyCreator"
+		class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+		<!-- 指定需要Spring管理事务的Bean -->
+		<property name="beanNames">
+			<list>
+				<value>loginService</value>
+				<value>sysService</value>
+				<value>functionService</value>
+				<value>roleService</value>
+				<value>studentService</value>
+				<value>studentScoreService</value>
+				<value>classDutyService</value>
+				<value>studentSituationService</value>
+				<value>teacherClassService</value>
+				<value>teacherSignInService</value>
+				<value>teacherSignInDayService</value>
+				<value>testService</value>
+			</list>
+		</property>
+		<!-- 调用事务管理拦截器 -->
+		<property name="interceptorNames">
+			<list>
+				<value>transactionInterceptor</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="loginService" class="edu.sms.service.LoginService">
+		<property name="dao">
+			<ref local="dao" />
+		</property>
+	</bean>
+	<bean id="sysService" class="edu.sms.service.SysService">
+		<property name="dao">
+			<ref local="dao" />
+		</property>
+	</bean>
+	<bean id="functionService" class="edu.sms.service.FunctionService">
+		<property name="dao">
+			<ref local="dao" />
+		</property>
+	</bean>
+	<bean id="roleService" class="edu.sms.service.RoleService">
+		<property name="dao">
+			<ref local="dao" />
+		</property>
+	</bean>
+	<bean id="studentService" class="edu.sms.service.StudentService">
+		<property name="dao">
+			<ref local="dao" />
+		</property>
+	</bean>
+	<bean id="studentScoreService" class="edu.sms.service.StudentScoreService">
+		<property name="dao">
+			<ref local="dao" />
+		</property>
+	</bean>
+	<bean id="classDutyService" class="edu.sms.service.ClassDutyService">
+		<property name="dao">
+			<ref local="dao" />
+		</property>
+	</bean>
+	<bean id="studentSituationService" class="edu.sms.service.StudentSituationService">
+		<property name="dao">
+			<ref local="dao" />
+		</property>
+	</bean>
+	<bean id="teacherClassService" class="edu.sms.service.TeacherClassService">
+		<property name="dao">
+			<ref local="dao" />
+		</property>
+	</bean>
+	<bean id="teacherSignInService" class="edu.sms.service.TeacherSignInService">
+		<property name="dao">
+			<ref local="dao" />
+		</property>
+	</bean>
+	<bean id="teacherSignInDayService" class="edu.sms.service.TeacherSignInDayService">
+		<property name="dao">
+			<ref local="dao" />
+		</property>
+	</bean>
+	<bean id="testService" class="edu.sms.service.TestService">
+		<property name="dao">
+			<ref local="dao" />
+		</property>
+	</bean>
+
+     
+    
+
+
+	<bean id="loginAction" class="edu.sms.action.LoginAction">
+		<property name="loginService">
+			<ref local="loginService" />
+		</property>
+	</bean>
+
+	<bean id="sysAction" class="edu.sms.action.SysAction">
+		<property name="sysService">
+			<ref local="sysService" />
+		</property>
+
+	</bean>
+
+    
+
+	<bean id="studentAction" class="edu.sms.action.StudentAction">
+		<property name="studentService">
+			<ref local="studentService" />
+		</property>
+		<property name="studentScoreService">
+			<ref local="studentScoreService" />
+		</property>
+		<property name="classDutyService">
+			<ref local="classDutyService" />
+		</property>
+		<property name="studentSituationService">
+			<ref local="studentSituationService" />
+		</property>
+	</bean>
+	<bean id="teacherAction" class="edu.sms.action.TeacherAction">
+		<property name="teacherClassService">
+			<ref local="teacherClassService" />
+		</property>
+		<property name="teacherSignInService">
+			<ref local="teacherSignInService" />
+		</property>
+		<property name="loginService">
+			<ref local="loginService" />
+		</property>
+		<property name="teacherSignInDayService">
+			<ref local="teacherSignInDayService" />
+		</property>
+		<property name="testService">
+			<ref local="testService" />
+		</property>
+	</bean>
+</beans>
