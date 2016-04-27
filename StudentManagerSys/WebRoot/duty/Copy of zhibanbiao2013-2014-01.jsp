@@ -1,32 +1,32 @@
-<%@ page language="java" contentType="text/html; charset=gbk"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <LINK href="<%= request.getContextPath()%>/frame/style.css" type=text/css rel=stylesheet>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gbk">
-<title>ĞÅÏ¢¹¤³ÌÏµÖµ°à±í</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ä¿¡æ¯å·¥ç¨‹ç³»å€¼ç­è¡¨</title>
 </head>
 <script type="text/javascript">
             function tanchu(j){        
                window.open (j,"Sample",
-               "fullscreen=no,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no, copyhistory=no,width=550,height=340,left=200,top=300");
+               "fullscreen=no,toolbar=yes,location=no,directories=no,status=yes,menubar=yes,scrollbars=yes,resizable=yes, copyhistory=no,width=550,height=640,left=600,top=300");
             }
             
             function tishi(){          
-              alert("Ë«»÷µ¯³öÑ§ÉúÑ¡Ôñ¶Ô»°¿ò");
+              alert("åŒå‡»å¼¹å‡ºå­¦ç”Ÿé€‰æ‹©å¯¹è¯æ¡†");
             }
            
 			function checkform(){
 				for (i=0;i<document.form1.length;i++){
 				        if(document.form1.elements[i].value==""){
-				        alert("ÔªËØ²»ÄÜÎª¿Õ!");
+				        alert("å…ƒç´ ä¸èƒ½ä¸ºç©º!");
 				        document.form1.elements[i].focus();
 				        return false;				        
 				        }
 				}
 				document.form1.submit();
-				alert("²Ù×÷³É¹¦");
+				alert("æ“ä½œæˆåŠŸ");
 			}
 
 </script>
@@ -93,16 +93,16 @@ background: url('<%=request.getContextPath() %>/duty/images/back.gif') repeat-x;
 	  </TD>
 		<TD WIDTH=503 HEIGHT=420 COLSPAN=6 BGCOLOR=#FFFFFF valign="top">
 		<form name="form1" action="<%=request.getContextPath() %>/student!saveDuty.action" method="post">
-	<!-- Ñ§ÆÚ´«Öµ -->
-	<input type="hidden"  name="classDutyList[0].term" value="2014-2015 µÚÒ»Ñ§ÆÚ" size="5">
-    <input type="hidden"  name="classDutyList[1].term" value="2014-2015 µÚÒ»Ñ§ÆÚ" size="5">
-    <input type="hidden"  name="classDutyList[2].term" value="2014-2015 µÚÒ»Ñ§ÆÚ" size="5">
-    <input type="hidden"  name="classDutyList[3].term" value="2014-2015 µÚÒ»Ñ§ÆÚ" size="5">
-    <input type="hidden"  name="classDutyList[4].term" value="2014-2015 µÚÒ»Ñ§ÆÚ" size="5">
-    <input type="hidden"  name="classDutyList[5].term" value="2014-2015 µÚÒ»Ñ§ÆÚ" size="5">
-    <input type="hidden"  name="classDutyList[6].term" value="2014-2015 µÚÒ»Ñ§ÆÚ" size="5">
-	<input type="hidden"  name="classDutyList[7].term" value="2014-2015 µÚÒ»Ñ§ÆÚ" size="5">
-    <!-- °à¼¶±àºÅ´«Öµ -->
+	<!-- å­¦æœŸä¼ å€¼ -->
+	<input type="hidden"  name="classDutyList[0].term" value="2014-2015 ç¬¬ä¸€å­¦æœŸ" size="5">
+    <input type="hidden"  name="classDutyList[1].term" value="2014-2015 ç¬¬ä¸€å­¦æœŸ" size="5">
+    <input type="hidden"  name="classDutyList[2].term" value="2014-2015 ç¬¬ä¸€å­¦æœŸ" size="5">
+    <input type="hidden"  name="classDutyList[3].term" value="2014-2015 ç¬¬ä¸€å­¦æœŸ" size="5">
+    <input type="hidden"  name="classDutyList[4].term" value="2014-2015 ç¬¬ä¸€å­¦æœŸ" size="5">
+    <input type="hidden"  name="classDutyList[5].term" value="2014-2015 ç¬¬ä¸€å­¦æœŸ" size="5">
+    <input type="hidden"  name="classDutyList[6].term" value="2014-2015 ç¬¬ä¸€å­¦æœŸ" size="5">
+	<input type="hidden"  name="classDutyList[7].term" value="2014-2015 ç¬¬ä¸€å­¦æœŸ" size="5">
+    <!-- ç­çº§ç¼–å·ä¼ å€¼ -->
 	<input type="hidden"  name="classDutyList[0].classNo" value="xx201502jsj" size="5">
     <input type="hidden"  name="classDutyList[1].classNo" value="1401" size="5">
     <input type="hidden"  name="classDutyList[2].classNo" value="1202" size="5">
@@ -111,16 +111,16 @@ background: url('<%=request.getContextPath() %>/duty/images/back.gif') repeat-x;
     <input type="hidden"  name="classDutyList[5].classNo" value="1302" size="5">
     <input type="hidden"  name="classDutyList[6].classNo" value="xx201503jsj" size="5">
 	<input type="hidden"  name="classDutyList[7].classNo" value="1402" size="5">
-    <!-- °à¼¶Ãû³Æ´«Öµ -->
-	<input type="hidden"  name="classDutyList[0].className" value="2015¼¶3+2" size="5">
-    <input type="hidden"  name="classDutyList[1].className" value="2014¼¶´ó×¨" size="5">
-    <input type="hidden"  name="classDutyList[2].className" value="2012¼¶3+2" size="5">
-    <input type="hidden"  name="classDutyList[3].className" value="2014¼¶ÖĞ×¨" size="5">
-    <input type="hidden"  name="classDutyList[4].className" value="2015¼¶´ó×¨" size="5">
-    <input type="hidden"  name="classDutyList[5].className" value="2013¼¶3+2" size="5">
-    <input type="hidden"  name="classDutyList[6].className" value="2015¼¶ÖĞ×¨" size="5">
-	<input type="hidden"  name="classDutyList[7].className" value="2014¼¶3+2" size="5">
-	<!-- Ó¦³öÇÚÈËÊı´«Öµ -->    
+    <!-- ç­çº§åç§°ä¼ å€¼ -->
+	<input type="hidden"  name="classDutyList[0].className" value="2015çº§3+2" size="5">
+    <input type="hidden"  name="classDutyList[1].className" value="2014çº§å¤§ä¸“" size="5">
+    <input type="hidden"  name="classDutyList[2].className" value="2012çº§3+2" size="5">
+    <input type="hidden"  name="classDutyList[3].className" value="2014çº§ä¸­ä¸“" size="5">
+    <input type="hidden"  name="classDutyList[4].className" value="2015çº§å¤§ä¸“" size="5">
+    <input type="hidden"  name="classDutyList[5].className" value="2013çº§3+2" size="5">
+    <input type="hidden"  name="classDutyList[6].className" value="2015çº§ä¸­ä¸“" size="5">
+	<input type="hidden"  name="classDutyList[7].className" value="2014çº§3+2" size="5">
+	<!-- åº”å‡ºå‹¤äººæ•°ä¼ å€¼ -->    
 	<input type="hidden"  name="classDutyList[0].ycq" value="20" size="5">
     <input type="hidden"  name="classDutyList[1].ycq" value="27" size="5">
     <input type="hidden"  name="classDutyList[2].ycq" value="31" size="5">
@@ -132,33 +132,33 @@ background: url('<%=request.getContextPath() %>/duty/images/back.gif') repeat-x;
 <table width="100%" height="764" border="1">
   <tr>
       <td height="99" colspan="14" align="center" valign="middle"><p> <br></p>
-        <h1><strong>£¨2013-2014µÚÒ»Ñ§ÆÚ£©ĞÅÏ¢¹¤³ÌÏµÖµ°à±í</strong></h1> <font size="3">Öµ°àÈË£º<s:property value="userName" /></font>&nbsp;&nbsp;&nbsp;<font size="3">ÈÕÆÚ£º<s:property value="today" /></font>
-         &nbsp;&nbsp;&nbsp;<input type="button" value="Ìá½»" onClick="checkform();"/>
+        <h1><strong>ï¼ˆ2013-2014ç¬¬ä¸€å­¦æœŸï¼‰ä¿¡æ¯å·¥ç¨‹ç³»å€¼ç­è¡¨</strong></h1> <font size="3">å€¼ç­äººï¼š<s:property value="userName" /></font>&nbsp;&nbsp;&nbsp;<font size="3">æ—¥æœŸï¼š<s:property value="today" /></font>
+         &nbsp;&nbsp;&nbsp;<input type="button" value="æäº¤" onClick="checkform();"/>
       <p>&nbsp;</p></td> 
   </tr>
   <tr>
-    <td colspan="4" align="center" valign="middle">°à¼¶</td>
-    <td width="74" align="center" valign="middle">2015£¨3+2£©</td>
-    <td width="77" align="center" valign="middle">2014´ó×¨</td> 
-    <td width="78" align="center" valign="middle">2012£¨3+2£©</td>
-    <td width="81" align="center" valign="middle">2014ÖĞ×¨</td>
-    <td width="79" align="center" valign="middle">2015´ó×¨</td>
-    <td width="80" align="center" valign="middle">2013£¨3+2£©</td>
-    <td width="77" align="center" valign="middle">2015ÖĞ×¨</td>
-	<td width="77" align="center" valign="middle">2014£¨3+2£©</td>
+    <td colspan="4" align="center" valign="middle">ç­çº§</td>
+    <td width="74" align="center" valign="middle">2015ï¼ˆ3+2ï¼‰</td>
+    <td width="77" align="center" valign="middle">2014å¤§ä¸“</td> 
+    <td width="78" align="center" valign="middle">2012ï¼ˆ3+2ï¼‰</td>
+    <td width="81" align="center" valign="middle">2014ä¸­ä¸“</td>
+    <td width="79" align="center" valign="middle">2015å¤§ä¸“</td>
+    <td width="80" align="center" valign="middle">2013ï¼ˆ3+2ï¼‰</td>
+    <td width="77" align="center" valign="middle">2015ä¸­ä¸“</td>
+	<td width="77" align="center" valign="middle">2014ï¼ˆ3+2ï¼‰</td>
   </tr>
   <tr align="center" valign="middle">
-    <td width="52" rowspan="10"><p>Íí</p>
-    <p>×Ô</p>
-    <p>Ï°</p>
+    <td width="52" rowspan="10"><p>æ™š</p>
+    <p>è‡ª</p>
+    <p>ä¹ </p>
     <p>&nbsp;</p>
     <p>19:00</p>
-    <p>µ½</p>
+    <p>åˆ°</p>
     <p>20:30</p>
     <p>&nbsp;</p></td>
-    <td width="80">Ó¦³öÇÚ</td>
-    <td colspan="2" rowspan="6"><p>ÈË</p>
-    <p>Êı</p></td>
+    <td width="80">åº”å‡ºå‹¤</td>
+    <td colspan="2" rowspan="6"><p>äºº</p>
+    <p>æ•°</p></td>
     <td>20</td>
     <td>27</td>
     <td>31</td>
@@ -169,7 +169,7 @@ background: url('<%=request.getContextPath() %>/duty/images/back.gif') repeat-x;
     <td>22</td>
   </tr>
   <tr align="center" valign="middle">
-    <td>Êµ³öÇÚ</td>
+    <td>å®å‡ºå‹¤</td>
     <td><input type="text" id="1102scq" name="classDutyList[0].scq" size="5" value="20"></td>
     <td><input type="text" id="1401scq" name="classDutyList[1].scq" size="5" value="25"></td>
     <td><input type="text" id="1202scq" name="classDutyList[2].scq" size="5" value="28"></td>
@@ -180,7 +180,7 @@ background: url('<%=request.getContextPath() %>/duty/images/back.gif') repeat-x;
 	<td><input type="text" id="1402scq" name="classDutyList[7].scq" size="5" value="23"></td>
   </tr>
   <tr align="center" valign="middle">
-    <td>Ñ¡ĞŞ</td>
+    <td>é€‰ä¿®</td>
     <td><input type="text" id="1102xx" name="classDutyList[0].xx" size="5" value="0"></td>
     <td><input type="text" id="1401xx" name="classDutyList[1].xx" size="5" value="0"></td>
     <td><input type="text" id="1202xx" name="classDutyList[2].xx" size="5" value="0"></td>
@@ -191,7 +191,7 @@ background: url('<%=request.getContextPath() %>/duty/images/back.gif') repeat-x;
     <td><input type="text" id="1402xx" name="classDutyList[7].xx" size="5" value="0"></td>	
   </tr>
   <tr align="center" valign="middle">
-    <td>ÊÂ¼Ù</td>
+    <td>äº‹å‡</td>
     <td><input type="text" id="1102sj" name="classDutyList[0].sj" size="5"  value="0"></td>
     <td><input type="text" id="1401sj" name="classDutyList[1].sj" size="5" value="0"></td>
     <td><input type="text" id="1202sj" name="classDutyList[2].sj" size="5" value="0"></td>
@@ -202,7 +202,7 @@ background: url('<%=request.getContextPath() %>/duty/images/back.gif') repeat-x;
     <td><input type="text" id="1402sj" name="classDutyList[7].sj" size="5" value="0"></td>
   </tr>
   <tr align="center" valign="middle">
-    <td>²¡¼Ù</td>
+    <td>ç—…å‡</td>
     <td><input type="text" id="1102bj" name="classDutyList[0].bj" size="5" value="0"></td>
     <td><input type="text" id="1401bj" name="classDutyList[1].bj" size="5" value="0"></td>
     <td><input type="text" id="1202bj" name="classDutyList[2].bj" size="5" value="0" ></td>
@@ -213,7 +213,7 @@ background: url('<%=request.getContextPath() %>/duty/images/back.gif') repeat-x;
 	<td><input type="text" id="1402bj" name="classDutyList[7].bj" size="5" value="0"></td>
   </tr>
   <tr align="center" valign="middle">
-    <td>ÎŞ¹ÊÈ±ÇÚ</td>
+    <td>æ— æ•…ç¼ºå‹¤</td>
     <td><input type="text" id="1102wgqq" name="classDutyList[0].wgqq" size="5" value="0"></td>
     <td><input type="text" id="1401wgqq" name="classDutyList[1].wgqq" size="5" value="0"></td>
     <td><input type="text" id="1202wgqq" name="classDutyList[2].wgqq" size="5" value="0"></td>
@@ -224,140 +224,140 @@ background: url('<%=request.getContextPath() %>/duty/images/back.gif') repeat-x;
 	<td><input type="text" id="1402wgqq" name="classDutyList[7].wgqq" size="5" value="0"></td>
   </tr>
   <tr align="center" valign="middle">
-    <td height="337">ÎŞ¹ÊÈ±ÇÚÈËĞÕÃû</td>
-    <td colspan="2">&nbsp;</td>
-    <td><font color="red">Ë«»÷µ¯³öÑ§ÉúÑ¡Ôñ¶Ô»°¿ò</font><textarea id="1102qqrxm" name="classDutyList[0].wgqqxm" rows="20" cols="10"  ondblclick="tanchu('<%=request.getContextPath() %>/duty/tanchukuang1102.jsp');"  readonly="true">ÎŞÈ±ÇÚ</textarea></td>
-    <td><font color="red">Ë«»÷µ¯³öÑ§ÉúÑ¡Ôñ¶Ô»°¿ò</font><textarea id="1401qqrxm" name="classDutyList[1].wgqqxm" rows="20" cols="10"  ondblclick="tanchu('<%=request.getContextPath() %>/duty/tanchukuang1401.jsp');"  readonly="true">ÎŞÈ±ÇÚ</textarea></td>
-    <td><font color="red">Ë«»÷µ¯³öÑ§ÉúÑ¡Ôñ¶Ô»°¿ò</font><textarea id="1202qqrxm" name="classDutyList[2].wgqqxm" rows="20" cols="10"  ondblclick="tanchu('<%=request.getContextPath() %>/duty/tanchukuang1202.jsp');"  readonly="true">ÎŞÈ±ÇÚ</textarea></td>
-    <td><font color="red">Ë«»÷µ¯³öÑ§ÉúÑ¡Ôñ¶Ô»°¿ò</font><textarea id="1403qqrxm" name="classDutyList[3].wgqqxm" rows="20" cols="10"  ondblclick="tanchu('<%=request.getContextPath() %>/duty/tanchukuang1403.jsp');"  readonly="true">ÎŞÈ±ÇÚ</textarea></td>
-    <td><font color="red">Ë«»÷µ¯³öÑ§ÉúÑ¡Ôñ¶Ô»°¿ò</font><textarea id="1301qqrxm" name="classDutyList[4].wgqqxm" rows="20" cols="10"  ondblclick="tanchu('<%=request.getContextPath() %>/duty/tanchukuang1201.jsp');"  readonly="true">ÎŞÈ±ÇÚ</textarea></td>
-    <td><font color="red">Ë«»÷µ¯³öÑ§ÉúÑ¡Ôñ¶Ô»°¿ò</font><textarea id="1302qqrxm" name="classDutyList[5].wgqqxm" rows="20" cols="10"  ondblclick="tanchu('<%=request.getContextPath() %>/duty/tanchukuang1302.jsp');"  readonly="true">ÎŞÈ±ÇÚ</textarea></td>
-    <td><font color="red">Ë«»÷µ¯³öÑ§ÉúÑ¡Ôñ¶Ô»°¿ò</font><textarea id="1303qqrxm" name="classDutyList[6].wgqqxm" rows="20" cols="10"  ondblclick="tanchu('<%=request.getContextPath() %>/duty/tanchukuang1301.jsp');"  readonly="true">ÎŞÈ±ÇÚ</textarea></td>
-	<td><font color="red">Ë«»÷µ¯³öÑ§ÉúÑ¡Ôñ¶Ô»°¿ò</font><textarea id="1402qqrxm" name="classDutyList[7].wgqqxm" rows="20" cols="10"  ondblclick="tanchu('<%=request.getContextPath() %>/duty/tanchukuang1402.jsp');"  readonly="true">ÎŞÈ±ÇÚ</textarea></td>
+    <td height="337">æ— æ•…ç¼ºå‹¤äººå§“å</td>
+    <td colspan="2">&nbsp;></td>
+    <td><font color="red">åŒå‡»å¼¹å‡ºå­¦ç”Ÿé€‰æ‹©å¯¹è¯æ¡†</font><textarea id="1102qqrxm" name="classDutyList[0].wgqqxm" rows="20" cols="10"  ondblclick="tanchu('<%=request.getContextPath() %>/student!studentInClass.action?classNo=1101');"  readonly="true">æ— ç¼ºå‹¤</textarea></td>
+    <td><font color="red">åŒå‡»å¼¹å‡ºå­¦ç”Ÿé€‰æ‹©å¯¹è¯æ¡†</font><textarea id="1401qqrxm" name="classDutyList[1].wgqqxm" rows="20" cols="10"  ondblclick="tanchu('<%=request.getContextPath() %>/duty/tanchukuang1401.jsp');"  readonly="true">æ— ç¼ºå‹¤</textarea></td>
+    <td><font color="red">åŒå‡»å¼¹å‡ºå­¦ç”Ÿé€‰æ‹©å¯¹è¯æ¡†</font><textarea id="1202qqrxm" name="classDutyList[2].wgqqxm" rows="20" cols="10"  ondblclick="tanchu('<%=request.getContextPath() %>/duty/tanchukuang1202.jsp');"  readonly="true">æ— ç¼ºå‹¤</textarea></td>
+    <td><font color="red">åŒå‡»å¼¹å‡ºå­¦ç”Ÿé€‰æ‹©å¯¹è¯æ¡†</font><textarea id="1403qqrxm" name="classDutyList[3].wgqqxm" rows="20" cols="10"  ondblclick="tanchu('<%=request.getContextPath() %>/duty/tanchukuang1403.jsp');"  readonly="true">æ— ç¼ºå‹¤</textarea></td>
+    <td><font color="red">åŒå‡»å¼¹å‡ºå­¦ç”Ÿé€‰æ‹©å¯¹è¯æ¡†</font><textarea id="1301qqrxm" name="classDutyList[4].wgqqxm" rows="20" cols="10"  ondblclick="tanchu('<%=request.getContextPath() %>/duty/tanchukuang1201.jsp');"  readonly="true">æ— ç¼ºå‹¤</textarea></td>
+    <td><font color="red">åŒå‡»å¼¹å‡ºå­¦ç”Ÿé€‰æ‹©å¯¹è¯æ¡†</font><textarea id="1302qqrxm" name="classDutyList[5].wgqqxm" rows="20" cols="10"  ondblclick="tanchu('<%=request.getContextPath() %>/duty/tanchukuang1302.jsp');"  readonly="true">æ— ç¼ºå‹¤</textarea></td>
+    <td><font color="red">åŒå‡»å¼¹å‡ºå­¦ç”Ÿé€‰æ‹©å¯¹è¯æ¡†</font><textarea id="1303qqrxm" name="classDutyList[6].wgqqxm" rows="20" cols="10"  ondblclick="tanchu('<%=request.getContextPath() %>/duty/tanchukuang1301.jsp');"  readonly="true">æ— ç¼ºå‹¤</textarea></td>
+	<td><font color="red">åŒå‡»å¼¹å‡ºå­¦ç”Ÿé€‰æ‹©å¯¹è¯æ¡†</font><textarea id="1402qqrxm" name="classDutyList[7].wgqqxm" rows="20" cols="10"  ondblclick="tanchu('<%=request.getContextPath() %>/duty/tanchukuang1402.jsp');"  readonly="true">æ— ç¼ºå‹¤</textarea></td>
   </tr>
   <tr align="center" valign="middle">
-    <td height="44">¼ÍÂÉ</td>
-    <td colspan="2" rowspan="2"><p>ÓÅ</p>
-    <p>Á¼</p>
-    <p>²î</p></td>
+    <td height="44">çºªå¾‹</td>
+    <td colspan="2" rowspan="2"><p>ä¼˜</p>
+    <p>è‰¯</p>
+    <p>å·®</p></td>
     <td><select name="classDutyList[0].jl" id="classDutyList[0].jl" >
-      <option value="ÓÅ" >ÓÅ</option>
-      <option value="Á¼">Á¼</option>
-      <option value="²î">²î</option>
+      <option value="ä¼˜" >ä¼˜</option>
+      <option value="è‰¯">è‰¯</option>
+      <option value="å·®">å·®</option>
     </select></td>
     <td><select id="classDutyList[1].jl" name="classDutyList[1].jl">
-      <option value="ÓÅ" >ÓÅ</option>
-      <option value="Á¼">Á¼</option>
-      <option value="²î">²î</option>
+      <option value="ä¼˜" >ä¼˜</option>
+      <option value="è‰¯">è‰¯</option>
+      <option value="å·®">å·®</option>
     </select></td>
     <td><select  id="classDutyList[2].jl" name="classDutyList[2].jl">
-      <option value="ÓÅ" >ÓÅ</option>
-      <option value="Á¼">Á¼</option>
-      <option value="²î">²î</option>
+      <option value="ä¼˜" >ä¼˜</option>
+      <option value="è‰¯">è‰¯</option>
+      <option value="å·®">å·®</option>
     </select></td>
     <td><select  id="classDutyList[3].jl" name="classDutyList[3].jl">
-      <option value="ÓÅ" >ÓÅ</option>
-      <option value="Á¼">Á¼</option>
-      <option value="²î">²î</option>
+      <option value="ä¼˜" >ä¼˜</option>
+      <option value="è‰¯">è‰¯</option>
+      <option value="å·®">å·®</option>
     </select></td>
     <td><select  id="classDutyList[4].jl" name="classDutyList[4].jl">
-      <option value="ÓÅ" >ÓÅ</option>
-      <option value="Á¼">Á¼</option>
-      <option value="²î">²î</option>
+      <option value="ä¼˜" >ä¼˜</option>
+      <option value="è‰¯">è‰¯</option>
+      <option value="å·®">å·®</option>
     </select></td>
     <td><select  id="classDutyList[5].jl" name="classDutyList[5].jl">
-      <option value="ÓÅ" >ÓÅ</option>
-      <option value="Á¼">Á¼</option>
-      <option value="²î">²î</option>
+      <option value="ä¼˜" >ä¼˜</option>
+      <option value="è‰¯">è‰¯</option>
+      <option value="å·®">å·®</option>
     </select></td>
     <td><select  id="classDutyList[6].jl" name="classDutyList[6].jl">
-      <option value="ÓÅ" >ÓÅ</option>
-      <option value="Á¼">Á¼</option>
-      <option value="²î">²î</option>
+      <option value="ä¼˜" >ä¼˜</option>
+      <option value="è‰¯">è‰¯</option>
+      <option value="å·®">å·®</option>
     </select></td>
     <td><select  id="classDutyList[7].jl" name="classDutyList[7].jl">
-      <option value="ÓÅ" >ÓÅ</option>
-      <option value="Á¼">Á¼</option>
-      <option value="²î">²î</option>
+      <option value="ä¼˜" >ä¼˜</option>
+      <option value="è‰¯">è‰¯</option>
+      <option value="å·®">å·®</option>
     </select></td>
   </tr>
   <tr align="center" valign="middle">
-    <td height="37">ÎÀÉú</td>
+    <td height="37">å«ç”Ÿ</td>
     <td><select  id="classDutyList[0].ws" name="classDutyList[0].ws" >
-      <option value="ÓÅ" >ÓÅ</option>
-      <option value="Á¼">Á¼</option>
-      <option value="²î">²î</option>
+      <option value="ä¼˜" >ä¼˜</option>
+      <option value="è‰¯">è‰¯</option>
+      <option value="å·®">å·®</option>
     </select></td>
     <td><select  id="classDutyList[1].ws" name="classDutyList[1].ws" >
-      <option value="ÓÅ" >ÓÅ</option>
-      <option value="Á¼">Á¼</option>
-      <option value="²î">²î</option>
+      <option value="ä¼˜" >ä¼˜</option>
+      <option value="è‰¯">è‰¯</option>
+      <option value="å·®">å·®</option>
     </select></td>
     <td><select  id="classDutyList[2].ws" name="classDutyList[2].ws" >
-      <option value="ÓÅ" >ÓÅ</option>
-      <option value="Á¼">Á¼</option>
-      <option value="²î">²î</option>
+      <option value="ä¼˜" >ä¼˜</option>
+      <option value="è‰¯">è‰¯</option>
+      <option value="å·®">å·®</option>
     </select></td>
     <td><select  id="classDutyList[3].ws" name="classDutyList[3].ws" >
-      <option value="ÓÅ" >ÓÅ</option>
-      <option value="Á¼">Á¼</option>
-      <option value="²î">²î</option>
+      <option value="ä¼˜" >ä¼˜</option>
+      <option value="è‰¯">è‰¯</option>
+      <option value="å·®">å·®</option>
     </select></td>
     <td><select id="classDutyList[4].ws" name="classDutyList[4].ws" >
-      <option value="ÓÅ" >ÓÅ</option>
-      <option value="Á¼">Á¼</option>
-      <option value="²î">²î</option>
+      <option value="ä¼˜" >ä¼˜</option>
+      <option value="è‰¯">è‰¯</option>
+      <option value="å·®">å·®</option>
     </select></td>
     <td><select id="classDutyList[5].ws" name="classDutyList[5].ws" >
-      <option value="ÓÅ" >ÓÅ</option>
-      <option value="Á¼">Á¼</option>
-      <option value="²î">²î</option>
+      <option value="ä¼˜" >ä¼˜</option>
+      <option value="è‰¯">è‰¯</option>
+      <option value="å·®">å·®</option>
     </select></td>
     <td><select  id="classDutyList[6].ws" name="classDutyList[6].ws" >
-       <option value="ÓÅ" >ÓÅ</option>
-      <option value="Á¼">Á¼</option>
-      <option value="²î">²î</option>
+       <option value="ä¼˜" >ä¼˜</option>
+      <option value="è‰¯">è‰¯</option>
+      <option value="å·®">å·®</option>
     </select></td>
     <td><select  id="classDutyList[7].ws" name="classDutyList[7].ws" >
-       <option value="ÓÅ" >ÓÅ</option>
-      <option value="Á¼">Á¼</option>
-      <option value="²î">²î</option>
+       <option value="ä¼˜" >ä¼˜</option>
+      <option value="è‰¯">è‰¯</option>
+      <option value="å·®">å·®</option>
     </select></td>
   </tr>
   <tr align="center" valign="middle">
-    <td>°à¼¶/»ú·¿</td>
+    <td>ç­çº§/æœºæˆ¿</td>
     <td colspan="2">&nbsp;</td>
     <td><select  id="classDutyList[0].bjorjf" name="classDutyList[0].bjorjf" >
-      <option value="°à¼¶">°à¼¶</option>
-      <option value="»ú·¿">»ú·¿</option>
+      <option value="ç­çº§">ç­çº§</option>
+      <option value="æœºæˆ¿">æœºæˆ¿</option>
     </select></td>
     <td><select id="classDutyList[1].bjorjf" name="classDutyList[1].bjorjf">
-      <option value="°à¼¶">°à¼¶</option>
-      <option value="»ú·¿">»ú·¿</option>
+      <option value="ç­çº§">ç­çº§</option>
+      <option value="æœºæˆ¿">æœºæˆ¿</option>
     </select></td>
     <td><select  id="classDutyList[2].bjorjf" name="classDutyList[2].bjorjf" >
-      <option value="°à¼¶">°à¼¶</option>
-      <option value="»ú·¿">»ú·¿</option>
+      <option value="ç­çº§">ç­çº§</option>
+      <option value="æœºæˆ¿">æœºæˆ¿</option>
     </select></td>
     <td><select  id="classDutyList[3].bjorjf" name="classDutyList[3].bjorjf" >
-      <option value="°à¼¶">°à¼¶</option>
-      <option value="»ú·¿">»ú·¿</option>
+      <option value="ç­çº§">ç­çº§</option>
+      <option value="æœºæˆ¿">æœºæˆ¿</option>
     </select></td>
     <td><select  id="classDutyList[4].bjorjf" name="classDutyList[4].bjorjf">
-      <option value="°à¼¶">°à¼¶</option>
-      <option value="»ú·¿">»ú·¿</option>
+      <option value="ç­çº§">ç­çº§</option>
+      <option value="æœºæˆ¿">æœºæˆ¿</option>
     </select></td>
     <td><select  id="classDutyList[5].bjorjf" name="classDutyList[5].bjorjf">
-      <option value="°à¼¶">°à¼¶</option>
-      <option value="»ú·¿">»ú·¿</option>
+      <option value="ç­çº§">ç­çº§</option>
+      <option value="æœºæˆ¿">æœºæˆ¿</option>
     </select></td>
     <td><select  id="classDutyList[6].bjorjf" name="classDutyList[6].bjorjf">
-      <option value="°à¼¶">°à¼¶</option>
-      <option value="»ú·¿">»ú·¿</option>
+      <option value="ç­çº§">ç­çº§</option>
+      <option value="æœºæˆ¿">æœºæˆ¿</option>
     </select></td>
 	<td><select  id="classDutyList[7].bjorjf" name="classDutyList[7].bjorjf">
-      <option value="°à¼¶">°à¼¶</option>
-      <option value="»ú·¿">»ú·¿</option>
+      <option value="ç­çº§">ç­çº§</option>
+      <option value="æœºæˆ¿">æœºæˆ¿</option>
     </select></td>
   </tr>
 </table>

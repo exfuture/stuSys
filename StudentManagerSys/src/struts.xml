@@ -39,7 +39,9 @@
 			<result name="openDuty" type="dispatcher" >/duty/zhibanbiao2013-2014-01.jsp</result>
 			<result name="queryDuty" type="dispatcher" >/duty/queryDuty.jsp</result>
 			<result name="backF" type="dispatcher" >/frame/right.htm</result>
-		    <result name="cur" type="dispatcher" >/duty/tanchukuang1102.jsp</result>
+		    <result name="cur" type="dispatcher" >/frame/lefta.jsp</result>
+		    
+		    <!--<result name="cur" type="dispatcher" >/duty/tanchukuang1102.jsp</result>-->
 		</action>
 		
 		<action name="teacher" class="teacherAction" >

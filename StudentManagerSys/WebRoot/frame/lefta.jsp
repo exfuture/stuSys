@@ -1,149 +1,92 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ page import = "java.util.*" %>
+<%@ page import = "edu.sms.entity.*" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<LINK href="<%= request.getContextPath()%>/frame/style.css" type=text/css rel=stylesheet>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<link href="superTables.css" rel="stylesheet" type="text/css" />
-<script language="javascript" src="jquery-1.4.4.min.js" ></script>
-
-<script type="text/javascript" src="jFixed.min.js"></script>
-
-<script language="javascript">
-//var tabProduct = document.getElementById("tabProduct");
-//  
-// ÉèÖÃ±í¸ñ¿É±à¼­
-// ¿ÉÒ»´ÎÉèÖÃ¶à¸ö£¬ÀıÈç£ºEditTables(tb1,tb2,tb2,......)
-//EditTables(tabProduct);
-    $(function() {
-       
-        var i = 1;
-        var da = { pkey: [{ key: "num", value: i}], value: [[{ key: 1, value: '' }, { key: 2, value: i }, { key: 1, value: 'A' }, { key: 1, value: '3' }, { key: 1, value: '4' }, { key: 1, value: '5'}]] }
-;
-        var op = { data: da, headerRows: 2};
-        $.jtool.loaddata("tabProduct", op);
-        //$("#tabProduct").toSuperTable({ fixedCols:1,width: "500px",height: "200px", headerRows: 2});
-        $("#tabProduct").jFixedtable({ colums: [{ name: "num"}], fixedCols: 2, width: "550", height: "300", headerRows: 2, pkey: ["num"], edit: true });
-        //$("#tabProduct").jGrid({ ftb: { headerRows: 3,  width: "500"} });
-        //$("#tabProduct").jGrid();
-        //$("#tabProduct").TableLock({lockRow:2,lockColumn:2,width:600,height:250});
-        //$.jtool.addRow('tabProduct', op);
-        i += 1
-        $("#add").click(function() {
-            var da = { pkey: [{ key: "num", value: i}], value: [[{ key: 1, value: '' }, { key: 2, value: i }, { key: 1, value: 'A' }, { key: 1, value: '3' }, { key: 1, value: '4' }, { key: 1, value: '5'}]] }
-;
-            var op = { data: da };
-            i++;
-            $.jtool.addRow('tabProduct', op);
-        });
-    });
-
-    function gettr() {
-        var trs = $.jtool.getchangetr();
-        for (var i = 0; i < trs.length; i++) {
-            var tr = trs[i]; 
-             
-			var pk = eval(tr.pkey);
-            for (var j = 0; j < pk.length; j++) {
-                alert("ĞŞ¸ÄĞĞÖ÷¼ü£º"+pk[j].key+"="+pk[j].value);
-            }
-            var values = tr.values;
-        }
-    }
-
-    function del(key) {
-        //alert(key.length);
-        for (var i = 0; i < key.length; i++) {
-            var pkey = key[i];
-            for (var j = 0; j < pkey.length; j++) {
-                alert(pkey[j].key + ":" + pkey[j].value);
-            }
-        }
-        return true;       
-    }
-</script>
-<title>±à¼­±í¸ñÊı¾İ</title>
-<style type="text/css">
-<!--
-body,div,p,ul,li,font,span,td,th{
-font-size:10pt;
-line-height:155%;
-
-}
-
-table{
-border-top-width: 1px;
-border-right-width: 1px;
-border-bottom-width: 0px;
-border-left-width: 1px;
-border-top-style: solid;
-border-right-style: solid;
-border-bottom-style: none;
-border-left-style: solid;
-border-top-color: #CCCCCC;
-border-right-color: #CCCCCC;
-border-bottom-color: #CCCCCC;
-border-left-color: #CCCCCC;
-border:1px solid #CCCCCC;
-}
-td{
-border-bottom-width: 1px;
-border-bottom-style: solid;
-border-bottom-color: #CCCCCC;
-border:1px solid #CCCCCC;
-}
-
-.EditCell_TextBox {
-width: 90%;
-border:1px solid #0099CC;
-}
-.EditCell_DropDownList {
-width: 90%;
-}
--->
-</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>é€‰æ‹©å§“å</title>
 </head>
-
-<body>
-<form id="form1" name="form1" method="post" action="">
-<h3>¹Ì¶¨ĞĞÁĞ¿É±à¼­µÄ±í¸ñ</h3>
-<div>
-<h3>¹¦ÄÜ£º</h3>
-<ul>
-<li>¹Ì¶¨ĞĞÁĞ</li>
-<li>¿ÉÒÔÔÚ±í¸ñÖ±½Ó±à¼­</li>
-<li>Ê¹ÓÃajax¶ÔÊı¾İ²Ù×÷</li>
-<li>Ê¹ÓÃtab¼üÔÚ¿É±à¼­ÁĞÇĞ»»</li>
-</ul>
-</div>
-Àı£º
-<table  width="608"  id="tabProduct">
-    <tr>
-      <td width="20" style="text-align:center;"  align="center"  rowspan="2" bgcolor="#EFEFEF" Name="Num"><input type="checkbox" name="checkbox" value="checkbox" /></td>
-      <td width="60" style="text-align:center;"  bgcolor="#EFEFEF" Name="Num" rowspan="2"  style=" text-align:center">ĞòºÅ</td>
-      <td width="478" style="text-align:center;"  bgcolor="#EFEFEF" colspan="4" >ºÏ¼Æ</td>   
-    </tr>
-    <tr>
-      <td width="152" bgcolor="#EFEFEF" style="text-align:center;"  Name="ProductName" EditType="DropDownList" DataItems="{text:'A',value:'a'},{text:'B',value:'b'},{text:'C',value:'c'},{text:'D',value:'d'}">ÉÌÆ·Ãû³Æ</td>
-      <td width="103" bgcolor="#EFEFEF" style="text-align:center;" Name="Amount" EditType="TextBox">ÊıÁ¿</td>
-      <td width="103" bgcolor="#EFEFEF" style="text-align:center;"  Name="Price" EditType="TextBox">µ¥¼Û</td>
-      <td width="120" bgcolor="#EFEFEF" style="text-align:center;"  Name="SumMoney" Expression="Amount*Price" Format="#,###.00">ºÏ¼Æ</td>
-    </tr>
-    
+<script language="javascript">
+   function setValue()
+   {
+      var list = document.getElementById("right");  
+      
+      var studentNames="";
+		 if(list.options.length == 0){  
+			 alert("è¯·è‡³å°‘é€‰æ‹©ä¸€ä¸ªäººæˆ–è€…å…³é—­é€‰æ‹©æ¡†ï¼");  
+			 return false;  
+		 }  
+		 else{  
+			 for (var i = 0; i < list.options.length; i++) {  
+			 //list.options[i].selected = true;  
+			    studentNames=studentNames+list[i].value+","
+			 }  
+		 }  
+		 
+		 
+			 alert(studentNames);
+		window.opener.document.getElementById("1102qqrxm").value=studentNames;
+        
+        window.close();
+		}
+      
+   
+</script>
+<body> 
+ <s:iterator id="a"  value="#session.stus" status="st"  >	
+		 
+		<tr><td>('<s:property value='st.stuName'/>','<s:property value='#a.classNo'/>');</td></tr>	
+		 
+	
+	
+	</s:iterator>
+	 
+   
+  
+ <%  
+	   
+     	/*List list1 = new ArrayList();
+     	list1.add("test1");
+     	list1.add("test2");
+     	request.setAttribute("list",list1);*/
      
-</table>
-
-<p><br />
-    <input id="add" type="button" name="add" value="ĞÂÔö"/>
-    <input type="button" name="Submit2" value="É¾³ı" onclick="$.jtool.deleteRow('tabProduct',del)" />
-    <input type="button" name="Submit2" value="ĞŞ¸ÄĞĞĞÅÏ¢" onclick="gettr();" />
-    <input type="button" name="Submit22" value="ÖØÖÃ" onclick="window.location.reload()" />
-    <input type="submit" name="Submit3" value="Ìá½»" onclick="return false;" />
-</p>
-
+	//List<Student> list = (List)session.getAttribute("stus");
+  	
+  	//for(int i = 0; i<list.size() ; i++ ){
+  	
+  	 //out.println(list.get(i).getStuName());
+	//}
+	
+	%>
+ 
+     </td>
+     <td>
+     <td><input type="button" onclick="setValue()">
+	     <s:optiontransferselect name="leftSide"  
+	     leftTitle="?????"     
+	     list="{'kjjk','æ”¹æ”¹','æ”¹æ”¹æ–¹èŠ³èŠ³'}" 
+	     addToRightLabel="????"  
+	     addToLeftLabel="????"  
+	     addAllToRightLabel="???????"   
+         addAllToLeftLabel="???????"  
+         selectAllLabel="??????"  
+	     doubleName="rightSide"   
+	     doubleList="{}"        
+   
+	     rightTitle="??????"  
+         doubleId="right"   >
+	     </s:optiontransferselect>
+     </td>
+     
+     </td>
+     
+     </tr>
+</table> 
+ 
 </form>
-
-
-
-
 </body>
 </html>
-

@@ -271,13 +271,14 @@ public class StudentAction extends ActionSupport {
 			String stuno=request.getParameter("classNo");			
 			List<Student> s = classService.queryList(stuno);
 			//studentScoreList = studentScoreService.queryStudentScores(stuno,"2014-2015-01");
+		    List<String> t=new ArrayList();
 			if (s.size() > 0) {
 				for (int i = 0; i < s.size(); i++) {
 					//request.setAttribute("stus",(String)s.get(i).getStuName());
-					
+					t.add((String)s.get(i).getStuName());
 				}
 			}
-			session.put("stus",s);
+			session.put("stus",t);
 			return "cur";
 		} else {
 			return "lose";
