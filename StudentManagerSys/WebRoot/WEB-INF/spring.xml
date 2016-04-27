@@ -164,7 +164,12 @@
 		</property>
 	</bean>
 
-     
+   <bean id="classService" class="edu.sms.service.ClassService">
+		<property name="dao">
+			<ref local="dao" />
+		</property>
+	</bean>
+
     
 
 
@@ -196,6 +201,9 @@
 		<property name="studentSituationService">
 			<ref local="studentSituationService" />
 		</property>
+	    <property name="classService">
+			<ref local="classService" />
+		</property>
 	</bean>
 	<bean id="teacherAction" class="edu.sms.action.TeacherAction">
 		<property name="teacherClassService">
@@ -213,5 +221,6 @@
 		<property name="testService">
 			<ref local="testService" />
 		</property>
+		
 	</bean>
 </beans>

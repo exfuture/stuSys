@@ -225,8 +225,8 @@ background: url('<%=request.getContextPath() %>/duty/images/back.gif') repeat-x;
   </tr>
   <tr align="center" valign="middle">
     <td height="337">无故缺勤人姓名</td>
-    <td colspan="2">&nbsp;</td>
-    <td><font color="red">双击弹出学生选择对话框</font><textarea id="1102qqrxm" name="classDutyList[0].wgqqxm" rows="20" cols="10"  ondblclick="tanchu('<%=request.getContextPath() %>/duty/tanchukuang1102.jsp');"  readonly="true">无缺勤</textarea></td>
+    <td colspan="2">&nbsp;></td>
+    <td><font color="red">双击弹出学生选择对话框</font><textarea id="1102qqrxm" name="classDutyList[0].wgqqxm" rows="20" cols="10"  ondblclick="tanchu('<%=request.getContextPath() %>/student!studentInClass.action?classNo=1101');"  readonly="true">无缺勤</textarea></td>
     <td><font color="red">双击弹出学生选择对话框</font><textarea id="1401qqrxm" name="classDutyList[1].wgqqxm" rows="20" cols="10"  ondblclick="tanchu('<%=request.getContextPath() %>/duty/tanchukuang1401.jsp');"  readonly="true">无缺勤</textarea></td>
     <td><font color="red">双击弹出学生选择对话框</font><textarea id="1202qqrxm" name="classDutyList[2].wgqqxm" rows="20" cols="10"  ondblclick="tanchu('<%=request.getContextPath() %>/duty/tanchukuang1202.jsp');"  readonly="true">无缺勤</textarea></td>
     <td><font color="red">双击弹出学生选择对话框</font><textarea id="1403qqrxm" name="classDutyList[3].wgqqxm" rows="20" cols="10"  ondblclick="tanchu('<%=request.getContextPath() %>/duty/tanchukuang1403.jsp');"  readonly="true">无缺勤</textarea></td>

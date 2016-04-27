@@ -39,6 +39,7 @@
 			<result name="openDuty" type="dispatcher" >/duty/zhibanbiao2013-2014-01.jsp</result>
 			<result name="queryDuty" type="dispatcher" >/duty/queryDuty.jsp</result>
 			<result name="backF" type="dispatcher" >/frame/right.htm</result>
+		    <result name="cur" type="dispatcher" >/duty/tanchukuang1102.jsp</result>
 		</action>
 		
 		<action name="teacher" class="teacherAction" >
@@ -51,6 +52,7 @@
 		    <result name="fail" type="redirect" >/teacher/test.jsp</result>
 		    <result name="try" type="redirect" >/teacher/test.jsp</result>
 		    <result name="ff" type="dispatcher" >/teacher/test1.jsp</result>
+		   
 		</action>
 	</package>
  

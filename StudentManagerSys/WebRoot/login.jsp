@@ -1,6 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ page language="java" import="java.util.*" %>
+ 
 <HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>用户登录</TITLE><LINK 
 href="images/Default.css" type=text/css rel=stylesheet><LINK 
 href="images/xtree.css" type=text/css rel=stylesheet><LINK 
@@ -57,6 +58,7 @@ style="DISPLAY: none; COLOR: red"></SPAN><SPAN id=ValrValidateCode
 style="DISPLAY: none; COLOR: red"></SPAN>
 <DIV id=ValidationSummary1 style="DISPLAY: none; COLOR: red"></DIV>
 </form>
-<DIV></DIV>
+<DIV>
+
 
 </FORM></BODY></HTML>

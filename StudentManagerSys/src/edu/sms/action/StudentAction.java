@@ -28,6 +28,7 @@ import edu.sms.entity.StudentScore;
 import edu.sms.entity.StudentSituation;
 import edu.sms.page.Page;
 import edu.sms.service.ClassDutyService;
+import edu.sms.service.ClassService;
 import edu.sms.service.LoginService;
 import edu.sms.service.StudentScoreService;
 import edu.sms.service.StudentService;
@@ -48,6 +49,7 @@ public class StudentAction extends ActionSupport {
 	 */
 	// private static final long serialVersionUID = 1L;
 	private StudentService studentService;
+	private ClassService classService;
 	private StudentScoreService studentScoreService;
 	private ClassDutyService classDutyService;
 	private StudentSituationService studentSituationService;
@@ -259,6 +261,39 @@ public class StudentAction extends ActionSupport {
 		}
 	}
 
+    //弹出学生
+	
+	public String studentInClass(){
+		
+		Map session = (Map) ActionContext.getContext().get(ActionContext.SESSION);
+		if (session.get("luser") != null) {
+			HttpServletRequest request = ServletActionContext.getRequest();
+			String stuno=request.getParameter("classNo");			
+			List<Student> s = classService.queryList(stuno);
+			//studentScoreList = studentScoreService.queryStudentScores(stuno,"2014-2015-01");
+			if (s.size() > 0) {
+				for (int i = 0; i < s.size(); i++) {
+					//request.setAttribute("stus",(String)s.get(i).getStuName());
+					
+				}
+			}
+			session.put("stus",s);
+			return "cur";
+		} else {
+			return "lose";
+		}
+		
+		
+	}
+	//使用 iterator
+	
+	public List t(){
+		HttpServletRequest request = ServletActionContext.getRequest();
+		String stuno=request.getParameter("classNo");			
+		List<Student> s = classService.queryList(stuno);
+		return   s;
+		
+	}
 	/**
 	 * 查询值班情况
 	 * 
@@ -416,6 +451,14 @@ public class StudentAction extends ActionSupport {
 		this.classDutyService = classDutyService;
 	}
 
+	public ClassService getClassService() {
+		return classService;
+	}
+
+	public void setClassService(ClassService classService) {
+		this.classService = classService;
+	}
+	
 	public String getcDate() {
 		return cDate;
 	}
